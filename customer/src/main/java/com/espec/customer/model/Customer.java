@@ -1,4 +1,4 @@
-package com.ex1cartoesapi.model;
+package com.espec.customer.model;
 
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
@@ -9,7 +9,6 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "customer")
-@EntityListeners(AuditingEntityListener.class)
 public class Customer implements Serializable {
     private static final long serialVersionUID = -8026843854427060306L;
 
@@ -17,8 +16,6 @@ public class Customer implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @NotNull(message =  "Nome deve ser preenchido")
-    @NotBlank(message = "Nome deve ser preenchido")
     private String name;
 
     public int getId() {

@@ -1,8 +1,11 @@
-package com.ex1cartoesapi.DTO.Response;
+package com.espec.customer.DTO.Response;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CustomerResponse {
     private Integer id;
 
+    @JsonProperty("nome")
     private String name;
 
     public Integer getId() {

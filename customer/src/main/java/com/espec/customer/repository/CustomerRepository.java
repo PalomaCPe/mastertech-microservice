@@ -1,6 +1,6 @@
-package com.ex1cartoesapi.repository;
+package com.espec.customer.repository;
 
-import com.ex1cartoesapi.model.Customer;
+import com.espec.customer.model.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

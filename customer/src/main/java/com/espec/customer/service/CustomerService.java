@@ -1,7 +1,7 @@
-package com.ex1cartoesapi.service;
+package com.espec.customer.service;
 
-import com.ex1cartoesapi.model.Customer;
-import com.ex1cartoesapi.repository.CustomerRepository;
+import com.espec.customer.model.Customer;
+import com.espec.customer.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +12,7 @@ public class CustomerService {
     @Autowired
     private CustomerRepository customerRepository;
 
-    public Customer save(Customer customer) {
+    public Customer create(Customer customer) {
         return customerRepository.save(customer);
     }
 

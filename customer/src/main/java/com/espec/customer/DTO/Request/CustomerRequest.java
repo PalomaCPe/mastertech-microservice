@@ -1,13 +1,18 @@
-package com.ex1cartoesapi.DTO.Request;
+package com.espec.customer.DTO.Request;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.stereotype.Component;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Component
 public class CustomerRequest {
-    @NotBlank
+    @NotNull
+    @NotEmpty
+    @JsonProperty("nome")
     @Size(min = 3, max = 40)
     private String name;
 

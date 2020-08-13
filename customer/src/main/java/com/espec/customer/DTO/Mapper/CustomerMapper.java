@@ -1,8 +1,8 @@
-package com.ex1cartoesapi.DTO.Mapper;
+package com.espec.customer.DTO.Mapper;
 
-import com.ex1cartoesapi.DTO.Request.CustomerRequest;
-import com.ex1cartoesapi.DTO.Response.CustomerResponse;
-import com.ex1cartoesapi.model.Customer;
+import com.espec.customer.DTO.Request.CustomerRequest;
+import com.espec.customer.DTO.Response.CustomerResponse;
+import com.espec.customer.model.Customer;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -18,12 +18,5 @@ public class CustomerMapper {
         customerResponse.setId(customer.getId());
         customerResponse.setName(customer.getName());
         return customerResponse;
-    }
-
-    public CustomerResponse toCustomerDetalheResponse(Customer customer) {
-        CustomerResponse customerDetalheResponse = new CustomerResponse();
-        customerDetalheResponse.setId(customer.getId());
-        customerDetalheResponse.setName(customer.getName());
-        return customerDetalheResponse;
     }
 }
