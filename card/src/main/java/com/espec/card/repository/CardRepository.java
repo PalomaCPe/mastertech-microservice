@@ -1,6 +1,6 @@
 package com.espec.card.repository;
 
-import com.ex1cartoesapi.model.Card;
+import com.espec.card.model.Card;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

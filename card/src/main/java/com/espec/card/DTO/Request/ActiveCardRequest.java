@@ -1,4 +1,4 @@
-package com.ex1cartoesapi.DTO.Request;
+package com.espec.card.DTO.Request;
 
 import javax.validation.constraints.NotNull;
 

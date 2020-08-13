@@ -22,6 +22,7 @@ public class CustomerController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Customer saveCustomer(@RequestBody @Valid Customer customer) {
+
         return customerService.create(customer);
     }
 

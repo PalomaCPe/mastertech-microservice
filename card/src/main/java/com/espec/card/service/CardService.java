@@ -1,7 +1,7 @@
-package com.ex1cartoesapi.service;
+package com.espec.card.service;
 
-import com.ex1cartoesapi.model.Card;
-import com.ex1cartoesapi.repository.CardRepository;
+import com.espec.card.model.Card;
+import com.espec.card.repository.CardRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package com.ex1cartoesapi.DTO.Response;
+package com.espec.card.DTO.Response;
 
 public class ActiveCardResponse {
     private Integer id;
