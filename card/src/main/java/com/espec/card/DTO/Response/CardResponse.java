@@ -7,6 +7,8 @@ public class CardResponse {
 
     private Integer customerId;
 
+    private Boolean active;
+
     public Integer getId() {
         return id;
     }
@@ -31,5 +33,11 @@ public class CardResponse {
         this.customerId = customerId;
     }
 
+    public Boolean getActive() {
+        return active;
+    }
 
+    public void setActive(Boolean active) {
+        this.active = active;
+    }
 }

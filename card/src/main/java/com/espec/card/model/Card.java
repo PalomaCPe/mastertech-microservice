@@ -15,6 +15,8 @@ public class Card {
     private String number;
     private Boolean active = false;
 
+    private int customerId;
+
     public Card() {
     }
 
@@ -40,5 +42,13 @@ public class Card {
 
     public void setActive(Boolean active) {
         this.active = active;
+    }
+
+    public int getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(int customerId) {
+        this.customerId = customerId;
     }
 }

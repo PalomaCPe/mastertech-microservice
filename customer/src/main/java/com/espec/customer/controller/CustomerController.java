@@ -11,7 +11,7 @@ import org.springframework.web.server.ResponseStatusException;
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping("/cliente")
+@RequestMapping("/customer")
 public class CustomerController {
     @Autowired
     CustomerService customerService;

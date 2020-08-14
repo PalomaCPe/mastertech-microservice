@@ -1,5 +1,7 @@
 package com.espec.card.service;
 
+import com.espec.card.client.Customer;
+import com.espec.card.client.CustomerClient;
 import com.espec.card.model.Card;
 import com.espec.card.repository.CardRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +14,15 @@ public class CardService {
     @Autowired
     private CardRepository cardRepository;
 
+    @Autowired
+    CustomerClient customerClient;
+
     public Card save(Card card) {
+        Customer customer = customerClient.findById(card.getCustomerId());
+
+        card.setCustomerId(customer.getId());
+        card.setNumber(card.getNumber());
+
         return cardRepository.save(card);
     }
 
