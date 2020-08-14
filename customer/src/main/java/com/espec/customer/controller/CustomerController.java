@@ -28,12 +28,8 @@ public class CustomerController {
 
     @GetMapping("/{id}")
     public Customer findById(@PathVariable(name = "id") int id){
-        try{
-            Customer customer = customerService.findById(id);
-            return customer;
-        }catch (RuntimeException e){
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, e.getMessage());
-        }
+        Customer customer = customerService.findById(id);
+        return customer;
     }
 
 }

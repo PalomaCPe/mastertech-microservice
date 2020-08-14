@@ -1,5 +1,6 @@
 package com.espec.customer.service;
 
+import com.espec.customer.exception.CustomerNotFoundException;
 import com.espec.customer.model.Customer;
 import com.espec.customer.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,12 +20,11 @@ public class CustomerService {
     public Customer findById(int id){
         Optional<Customer> customerOptional = customerRepository.findById(id);
 
-        if(customerOptional.isPresent()){
-            Customer customer = customerOptional.get();
-            return  customer;
-        }else {
-            throw new RuntimeException("Not found");
+        if(!customerOptional.isPresent()){
+            throw new CustomerNotFoundException();
         }
+
+        return  customerOptional.get();
     }
 
 }

@@ -2,6 +2,8 @@ package com.espec.card.service;
 
 import com.espec.card.client.Customer;
 import com.espec.card.client.CustomerClient;
+import com.espec.card.exception.CardNotFoundException;
+import com.espec.card.exception.NotActiveCardException;
 import com.espec.card.model.Card;
 import com.espec.card.repository.CardRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,19 +32,22 @@ public class CardService {
         Optional<Card> cardOptional = cardRepository.findByNumber(number);
 
         if(!cardOptional.isPresent()) {
-            throw new RuntimeException("Not Found Card "+number);
+            throw new CardNotFoundException();
+        } else if (!cardOptional.get().getActive()) {
+            throw new NotActiveCardException();
         }
-
         return cardOptional.get();
-
     }
 
     public Card active(String number, boolean active) {
+        Optional<Card> cardOptional = cardRepository.findByNumber(number);;
 
-        Card card = getCardByNumber(number);
-        card.setActive(active);
+        if(!cardOptional.isPresent()) {
+            throw new CardNotFoundException();
+        }
 
-        return cardRepository.save(card);
+        cardOptional.get().setActive(active);
+        return cardRepository.save(cardOptional.get());
     }
 
 
