@@ -29,7 +29,18 @@ public class CardService {
     }
 
     public Card getCardByNumber(String number) {
-        Optional<Card> cardOptional = cardRepository.findByNumber(number);
+        Optional<Card> cardOptional = cardRepository.getCardByNumber(number);
+
+        if(!cardOptional.isPresent()) {
+            throw new CardNotFoundException();
+        } else if (!cardOptional.get().getActive()) {
+            throw new NotActiveCardException();
+        }
+        return cardOptional.get();
+    }
+
+    public Card getCardById(int id) {
+        Optional<Card> cardOptional = cardRepository.getCardById(id);
 
         if(!cardOptional.isPresent()) {
             throw new CardNotFoundException();
@@ -40,7 +51,7 @@ public class CardService {
     }
 
     public Card active(String number, boolean active) {
-        Optional<Card> cardOptional = cardRepository.findByNumber(number);;
+        Optional<Card> cardOptional = cardRepository.getCardByNumber(number);;
 
         if(!cardOptional.isPresent()) {
             throw new CardNotFoundException();

@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface PaymentRepository extends JpaRepository<Payment,Integer> {
 
-    List<Payment> findByCardId(int cardId);
+    List<Payment> getPaymentsByCardId(int cardId);
 
     void deleteByCardId(int cardId);
 }

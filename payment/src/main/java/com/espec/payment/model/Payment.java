@@ -1,14 +1,18 @@
 package com.espec.payment.model;
 
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
 import javax.persistence.*;
 
 @Entity
+@Table(name = "payment")
+@EntityListeners(AuditingEntityListener.class)
 public class Payment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    private int cardI;
+    private int cardId;
 
     private String description;
 
@@ -23,11 +27,11 @@ public class Payment {
     }
 
     public int getCardId() {
-        return cardI;
+        return cardId;
     }
 
-    public void setCardId(int cardI) {
-        this.cardI = cardI;
+    public void setCardId(int cardId) {
+        this.cardId = cardId;
     }
 
     public String getDescription() {

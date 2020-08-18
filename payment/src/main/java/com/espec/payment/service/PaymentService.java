@@ -8,7 +8,6 @@ import com.espec.payment.repository.PaymentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.transaction.Transactional;
 import java.util.List;
 
 @Service
@@ -25,7 +24,7 @@ public class PaymentService {
     }
 
     public Iterable<Payment> findPaymentsByCardId(int cardId) {
-        List<Payment> paymentList = paymentRepository.findByCardId(cardId);
+        List<Payment> paymentList = paymentRepository.getPaymentsByCardId(cardId);
 
         if (paymentList.size() > 0) {
             return paymentList;
@@ -34,11 +33,9 @@ public class PaymentService {
         }
     }
 
-    @Transactional
-    public void deletePaymentsByCardId(int cardId) {
-        Card card = cardClient.findById(cardId);
+    public void deletePaymentsByCardNumber(int cardNumber) {
+        Card card = cardClient.findById(cardNumber);
         paymentRepository.deleteByCardId(card.getId());
-
     }
 
 }

@@ -37,11 +37,11 @@ public class PaymentController {
 
     }
 
-    @DeleteMapping("/{cardId}")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void deletePaymentByIdCartao (@PathVariable(name = "cardId") int cardId) {
-        paymentService.deletePaymentsByCardId(cardId);
-    }
+//    @DeleteMapping("/{cardId}")
+//    @ResponseStatus(HttpStatus.NO_CONTENT)
+//    public void deletePaymentByIdCartao (@PathVariable(name = "cardId") int cardId) {
+//        paymentService.deletePaymentsByCardId(cardId);
+//    }
 
 
 }

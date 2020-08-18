@@ -41,4 +41,10 @@ public class CardController {
         Card card = cardService.getCardByNumber(number);
         return cardMapper.toCardDetalheResponse(card);
     }
+
+    @GetMapping("/byId/{id}")
+    public CardResponse getCardById(@PathVariable int id) {
+        Card card = cardService.getCardById(id);
+        return cardMapper.toCardDetalheResponse(card);
+    }
 }
