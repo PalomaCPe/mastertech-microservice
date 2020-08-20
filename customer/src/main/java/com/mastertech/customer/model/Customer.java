@@ -1,4 +1,4 @@
-package com.espec.customer.model;
+package com.mastertech.customer.model;
 
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 

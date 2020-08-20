@@ -1,4 +1,4 @@
-package com.espec.customer.DTO.Request;
+package com.mastertech.customer.DTO.Request;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.stereotype.Component;

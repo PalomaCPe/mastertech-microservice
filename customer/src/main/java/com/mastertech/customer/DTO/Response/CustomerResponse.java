@@ -1,4 +1,4 @@
-package com.espec.customer.DTO.Response;
+package com.mastertech.customer.DTO.Response;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

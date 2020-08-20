@@ -1,12 +1,11 @@
-package com.espec.customer.controller;
+package com.mastertech.customer.controller;
 
-import com.espec.customer.DTO.Mapper.CustomerMapper;
-import com.espec.customer.model.Customer;
-import com.espec.customer.service.CustomerService;
+import com.mastertech.customer.DTO.Mapper.CustomerMapper;
+import com.mastertech.customer.service.CustomerService;
+import com.mastertech.customer.model.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
 

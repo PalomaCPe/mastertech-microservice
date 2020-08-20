@@ -1,8 +1,8 @@
-package com.espec.customer.DTO.Mapper;
+package com.mastertech.customer.DTO.Mapper;
 
-import com.espec.customer.DTO.Request.CustomerRequest;
-import com.espec.customer.DTO.Response.CustomerResponse;
-import com.espec.customer.model.Customer;
+import com.mastertech.customer.DTO.Request.CustomerRequest;
+import com.mastertech.customer.DTO.Response.CustomerResponse;
+import com.mastertech.customer.model.Customer;
 import org.springframework.stereotype.Component;
 
 @Component

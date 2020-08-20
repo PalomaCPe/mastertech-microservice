@@ -1,8 +1,8 @@
-package com.espec.customer.service;
+package com.mastertech.customer.service;
 
-import com.espec.customer.exception.CustomerNotFoundException;
-import com.espec.customer.model.Customer;
-import com.espec.customer.repository.CustomerRepository;
+import com.mastertech.customer.repository.CustomerRepository;
+import com.mastertech.customer.exception.CustomerNotFoundException;
+import com.mastertech.customer.model.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
